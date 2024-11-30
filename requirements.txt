@@ -1,0 +1,5 @@
+networkx[default]
+matplotlib
+pandas
+tqdm
+perlin-noise
