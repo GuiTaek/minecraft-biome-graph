@@ -425,20 +425,23 @@ def plot_main():
     }
     analyse_summary("overworld.json", parameters["t"], parameters["h"], marked_biomes)    
 
-def process_graph(from_filename, temp_filename, to_filename):
+def process_graph(from_filename, temp_filename, to_filename, quantile):
     if os.path.exists(temp_filename):
         os.remove(temp_filename)
     relative_graph(from_filename, to_filename)
     os.rename(to_filename, temp_filename)
-    prune_graph(0.35, temp_filename, to_filename)
+    prune_graph(quantile, temp_filename, to_filename)
     os.remove(temp_filename)
     os.rename(to_filename, temp_filename)
     round_graph(temp_filename, to_filename)
     os.remove(temp_filename)
-    
 
 if __name__ == "__main__":
-    process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result.graphml")
+    generate_graph("overworld.json", "overworld_graph.graphml")
+    process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_0.20_quantile.graphml", 0.20)
+    process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_0.35_quantile.graphml", 0.35)
+    process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_0.50_quantile.graphml", 0.50)
+    process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_full.graphml", 1.00)
    # round_graph()
    # prune_graph(0.35)
    # generate_graph("overworld.json", "overworld_graph.graphml")
