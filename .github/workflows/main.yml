@@ -21,15 +21,25 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
-  greet:
+  publish:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: run it
+    - name: make dirs
       run: |
-        touch hello
-        touch world
+        mkdir scripts
+        mkdir results
+    - name: Checkout Scripts
+      uses: actions/checkout@v4
+        path=./scripts
+    - name: test checkout
+      run: |
+        cd scripts
         ls
+        echo finished
+    - name: Checkout results
+      uses: actions/checkout@v4
+        path=./results
