@@ -101,11 +101,7 @@ def probabilities(biomes):
             probabilities[biome["biome"]] = 0.0
         product = 1.0
         for parameter in parameters:
-            pre, aft = biome["parameters"][parameter]
-            pre = adjust_val(parameter, pre)
-            aft = adjust_val(parameter, aft)
-            proba_step = noise_cdfs[parameter](aft) - noise_cdfs[parameter](pre)
-            product *= proba_step
+            product *= proba_parameter(parameter, biome["parameters"][parameter])
         probabilities[biome["biome"]] += product
     probabilities = {biome: probabilities[biome] for biome in sorted(probabilities.keys())}
     return probabilities
@@ -114,6 +110,11 @@ def save_probabilities():
     biomes = read_biomes("overworld.json")
     with open("probabilities.json", mode="w") as f:
         json.dump(probabilities(biomes), f, indent=4)
+
+def proba_parameter(parameter, interval):
+    to_val = noise_cdfs[parameter](adjust_val(parameter, interval[1]))
+    from_val = noise_cdfs[parameter](adjust_val(parameter, interval[0]))
+    return to_val - from_val
 
 def graph(biomes):
     nodes = set([biome["biome"] for biome in biomes if biome["parameters"]["depth"] == 0.0])
@@ -127,8 +128,8 @@ def graph(biomes):
         biome1_parameters = {key: val for key, val in biome1["parameters"].items() if key in parameters}
         G.nodes[biome1["biome"]]["weight"] += np.prod(
             [
-                to_val - from_val
-                for parameter, (from_val, to_val) in biome1_parameters.items()
+                proba_parameter(parameter, interval)
+                for parameter, interval in biome1_parameters.items()
             ]
         )
         for biome2 in biomes:
@@ -147,7 +148,7 @@ def graph(biomes):
                     continue
                 if from_overlap > to_overlap:
                     break
-                product *= to_overlap - from_overlap
+                product *= proba_parameter(parameter, [from_overlap, to_overlap])
             else:
                 if nr_adjacent == 0:
                     print(biome1)
