@@ -36,5 +36,5 @@ jobs:
       run: echo bye world
     - name: try to print dir
       run: cwd
-    - name try to go to parent
+    - name: try to go to parent
       run: cd ..
