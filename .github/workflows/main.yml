@@ -36,12 +36,9 @@ jobs:
       uses: actions/checkout@v4
       with:
         path: ./scripts
-    - name: test checkout
-      run: |
-        cd scripts
-        ls
-        echo finished
     - name: Checkout results
       uses: actions/checkout@v4
       with:
         path: ./scripts
+    - name: Checkout mcmeta
+      run:  git clone -b data-json --single-branch https://github.com/misode/mcmeta.git
