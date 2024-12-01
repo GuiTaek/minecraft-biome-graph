@@ -28,5 +28,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
+    - name: start conversation
+      run: echo hello world
+    - name: list files
       run: ls
+    - name: end conversation
+      run: echo bye world
+    - name: try to print dir
+      run: cwd
+    - name try to go to parent
+      run: cd ..
