@@ -1,5 +1,6 @@
 import json
 import re
+import os
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
@@ -165,37 +166,37 @@ def graph(biomes):
                         G.add_edge(*pair, weight=product)
     return G
 
-def generate_graph():
-    G = graph(read_biomes("overworld.json"))
-    nx.write_graphml(G, "overworld.xml")
+def generate_graph(from_filename, to_filename):
+    G = graph(read_biomes(from_filename))
+    nx.write_graphml(G, to_filename)
 
-def relative_graph():
-    G = nx.read_graphml("overworld.xml")
+def relative_graph(from_filename, to_filename):
+    G = nx.read_graphml(from_filename)
     for biome1, biome2 in G.edges:
         G.edges[(biome1, biome2)]["weight"] /= np.sqrt(G.nodes[biome1]["weight"] * G.nodes[biome2]["weight"])
     for node in G.nodes:
         del G.nodes[node]["weight"]
-    nx.write_graphml(G, "overworld_relative.xml")
+    nx.write_graphml(G, to_filename)
+
+def prune_graph(quantile, from_filename, to_filename):
+    G = nx.read_graphml(from_filename)
+    weight_arr = [G.edges[edge]["weight"] for edge in G.edges]
+    split = np.quantile(weight_arr, 1 - quantile)
+    for edge in G.edges:
+        if G.edges[edge]["weight"] < split:
+            G.remove_edge(*edge)
+    nx.write_graphml(G, to_filename)
 
 # from https://stackoverflow.com/a/65326680/3289974
 def precision_round(number, digits=3):
     power = F"{number:e}".split('e')[1]
     return round(number, -(int(power) - digits))
 
-def round_graph():
-    G = nx.read_graphml("overworld_pruned.xml")
+def round_graph(from_filename, to_filename):
+    G = nx.read_graphml(from_filename)
     for edge in G.edges:
         G.edges[edge]["weight"] = precision_round(G.edges[edge]["weight"], 2)
-    nx.write_graphml(G, "overworld_rounded.xml")
-    
-def prune_graph(quantile):
-    G = nx.read_graphml("overworld_relative.xml")
-    weight_arr = [G.edges[edge]["weight"] for edge in G.edges]
-    split = np.quantile(weight_arr, 1 - quantile)
-    for edge in G.edges:
-        if G.edges[edge]["weight"] < split:
-            G.remove_edge(*edge)
-    nx.write_graphml(G, "overworld_pruned.xml")
+    nx.write_graphml(G, to_filename)
 
 def show_graph():
     G = nx.read_graphml("overworld.xml")
@@ -424,12 +425,25 @@ def plot_main():
     }
     analyse_summary("overworld.json", parameters["t"], parameters["h"], marked_biomes)    
 
+def process_graph(from_filename, temp_filename, to_filename):
+    if os.path.exists(temp_filename):
+        os.remove(temp_filename)
+    relative_graph(from_filename, to_filename)
+    os.rename(to_filename, temp_filename)
+    prune_graph(0.35, temp_filename, to_filename)
+    os.remove(temp_filename)
+    os.rename(to_filename, temp_filename)
+    round_graph(temp_filename, to_filename)
+    os.remove(temp_filename)
+    
+
 if __name__ == "__main__":
+    process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result.graphml")
    # round_graph()
    # prune_graph(0.35)
-   # generate_graph()
+   # generate_graph("overworld.json", "overworld_graph.graphml")
    # relative_graph()
    # plot_main()
-   #plot_main()
-   save_probabilities()
+   # plot_main()
+   # save_probabilities()
    # print(json.dumps(values_of_parameters(read_biomes("overworld.json")), indent=4))
