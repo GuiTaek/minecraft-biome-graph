@@ -34,7 +34,8 @@ jobs:
         mkdir results
     - name: Checkout Scripts
       uses: actions/checkout@v4
-        path=./scripts
+      with:
+        path: ./scripts
     - name: test checkout
       run: |
         cd scripts
@@ -42,4 +43,5 @@ jobs:
         echo finished
     - name: Checkout results
       uses: actions/checkout@v4
-        path=./results
+      with:
+        path: ./scripts
