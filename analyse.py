@@ -436,13 +436,16 @@ def process_graph(from_filename, temp_filename, to_filename, quantile):
     round_graph(temp_filename, to_filename)
     os.remove(temp_filename)
 
-if __name__ == "__main__":
+def main_analyse():
     save_probabilities()
     generate_graph("overworld.json", "overworld_graph.graphml")
     process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_0.20_quantile.graphml", 0.20)
     process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_0.35_quantile.graphml", 0.35)
     process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_0.50_quantile.graphml", 0.50)
     process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_full.graphml", 1.00)
+
+if __name__ == "__main__":
+    main_analyse()
    # round_graph()
    # prune_graph(0.35)
    # generate_graph("overworld.json", "overworld_graph.graphml")

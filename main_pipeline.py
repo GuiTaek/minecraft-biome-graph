@@ -8,13 +8,14 @@ import shutil
 
 from analyse import main_analyse
 
-MY_FIRST_COMMIT_HASH = "66c8be5"
+MY_FIRST_COMMIT_HASH = "1a7dde4"
 MCMETA_FIRST_COMMIT_HASH = "319c7221" # "156e3801"
 MCMETA_IGNORE_REGEX = re.compile("🚀 Update data-json for (.*)")
 GET_COMMIT_MESSAGES_COMMAND = "git log --oneline --pretty=format:\"%s\" {}..HEAD"
 GET_COMMIT_WITH_HASH_COMMAND = "git log --oneline --pretty=format:\"%h\" {}..HEAD"
 CHECKOUT_COMMIT_HASH = "git checkout {}"
 COMMIT = "git commit --allow-empty -m \"{}\""
+ADD_ALL = "git add ."
 OVERWORLD_PATH = "mcmeta/data/minecraft/dimension/overworld.json"
 RUN_SCRIPT = "python analyse.py"
 FILES_TO_MOVE = [
@@ -51,9 +52,6 @@ def get_commit_hashes(first_hash, path):
 
 def get_own_commits():
     finished_versions = get_commit_messages(MY_FIRST_COMMIT_HASH, "results")
-
-    # isn't possible without tricksing the hash algorithm from git to remove this commit from the history
-    finished_versions = [version for version in finished_versions if "correct commit hash" != version]
     return finished_versions
 
 def get_other_commits():
@@ -79,7 +77,9 @@ def get_versions_to_process(own_commits, other_commits):
 
 def copy_overworld(commit_hash, copy_to_path):
     os.chdir("../mcmeta")
-    os.popen(CHECKOUT_COMMIT_HASH.format(commit_hash))
+
+    # shell is no problem because no user input
+    subprocess.Popen(CHECKOUT_COMMIT_HASH.format(commit_hash), shell=True).wait()
     os.chdir("..")
     shutil.copyfile(OVERWORLD_PATH, copy_to_path)
     os.chdir("scripts")
@@ -91,7 +91,11 @@ def process_versions(versions_to_process):
         main_analyse()
         for filename in FILES_TO_MOVE:
             shutil.copyfile(f"{filename}", f"../results/{filename}")
-        os.popen(COMMIT.format(version))
+        os.chdir("../results")
+        # shell is no problem because no user input
+        subprocess.Popen(ADD_ALL, shell=True).wait()
+        subprocess.Popen(COMMIT.format(version), shell=True).wait()
+        os.chdir("../scripts")
         
 
 def main():
