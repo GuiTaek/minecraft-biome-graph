@@ -437,6 +437,7 @@ def process_graph(from_filename, temp_filename, to_filename, quantile):
     os.remove(temp_filename)
 
 if __name__ == "__main__":
+    save_probabilities()
     generate_graph("overworld.json", "overworld_graph.graphml")
     process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_0.20_quantile.graphml", 0.20)
     process_graph("overworld_graph.graphml", "temp.graphml", "overworld_graph_result_0.35_quantile.graphml", 0.35)
