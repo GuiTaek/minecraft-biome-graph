@@ -32,3 +32,12 @@ jobs:
       run: git checkout minecraft-versions
     - name: Checkout mcmeta
       run:  git clone -b data-json --single-branch https://github.com/misode/mcmeta.git
+    - name: Run main_pipeline.py
+      run: |
+        cd scripts
+        sudo apt update
+        sudo apt install python[3.13]
+        python -m venv venv
+        . venv/bin/sctivate
+        python main_pipeline.py
+      
