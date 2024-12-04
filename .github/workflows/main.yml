@@ -11,7 +11,7 @@ jobs:
   # This workflow contains a single job called "greet"
   publish:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,14 +31,15 @@ jobs:
         ref: minecraft-versions
     - name: Checkout mcmeta
       run:  git clone -b data-json --single-branch https://github.com/misode/mcmeta.git
+    - name: Install python
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.13
     - name: Run main_pipeline.py
       run: |
         cd scripts
         sudo apt-get update
-        # I would love to use python 3.13.1 but at the time of writing this pipeline, this isn't out for linux
-        sudo apt-get install -y python[3.12.3]
-        sudo apt-get install -y python3.12-venv
-        python3 -m venv venv
+        python -m venv venv
         . venv/bin/sctivate
-        echo python3 main_pipeline.py
+        echo python main_pipeline.py
       
