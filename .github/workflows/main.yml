@@ -29,6 +29,7 @@ jobs:
       with:
         path: ./scripts
     - name: Checkout branch minecraft-versions
+      working-directory: results
       run: git checkout minecraft-versions
     - name: Checkout mcmeta
       run:  git clone -b data-json --single-branch https://github.com/misode/mcmeta.git
