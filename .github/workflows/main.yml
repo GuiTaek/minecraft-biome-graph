@@ -40,6 +40,6 @@ jobs:
         cd scripts
         sudo apt-get update
         python -m venv venv
-        . venv/bin/sctivate
+        . venv/bin/activate
         echo python main_pipeline.py
       
