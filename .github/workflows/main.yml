@@ -28,10 +28,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         path: ./results
-    - name: Checkout branch minecraft-versions
-      working-directory: ./results
-      run: |
-        git checkout minecraft-versions
+        ref: minecraft-versions
     - name: Checkout mcmeta
       run:  git clone -b data-json --single-branch https://github.com/misode/mcmeta.git
     - name: Run main_pipeline.py
