@@ -37,7 +37,8 @@ jobs:
         sudo apt-get update
         # I would love to use python 3.13.1 but at the time of writing this pipeline, this isn't out for linux
         sudo apt-get install -y python[3.12.3]
+        sudo apt-get install -y python3.12-venv
         python3 -m venv venv
         . venv/bin/sctivate
-        echo python main_pipeline.py
+        echo python3 main_pipeline.py
       
