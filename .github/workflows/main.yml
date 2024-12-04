@@ -34,9 +34,10 @@ jobs:
     - name: Run main_pipeline.py
       run: |
         cd scripts
-        sudo apt update
-        sudo apt install python[3.13]
-        python -m venv venv
+        sudo apt-get update
+        # I would love to use python 3.13.1 but at the time of writing this pipeline, this isn't out for linux
+        sudo apt-get install -y python[3.12.3]
+        python3 -m venv venv
         . venv/bin/sctivate
         echo python main_pipeline.py
       
