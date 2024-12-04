@@ -8,8 +8,8 @@ import shutil
 
 from analyse import main_analyse
 
-MY_FIRST_COMMIT_HASH = "1a7dde4"
-MCMETA_FIRST_COMMIT_HASH = "319c7221" # "156e3801"
+MY_FIRST_COMMIT_HASH = "0442958"
+MCMETA_FIRST_COMMIT_HASH = "156e3801"
 MCMETA_IGNORE_REGEX = re.compile("🚀 Update data-json for (.*)")
 GET_COMMIT_MESSAGES_COMMAND = "git log --oneline --pretty=format:\"%s\" {}..HEAD"
 GET_COMMIT_WITH_HASH_COMMAND = "git log --oneline --pretty=format:\"%h\" {}..HEAD"
