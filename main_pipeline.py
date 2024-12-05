@@ -16,7 +16,7 @@ GET_COMMIT_WITH_HASH_COMMAND = "git log --oneline --pretty=format:\"%h\" {}..HEA
 CHECKOUT_COMMIT_HASH = "git checkout {}"
 COMMIT = "git commit --allow-empty -m \"{}\""
 ADD_ALL = "git add ."
-OVERWORLD_PATH = "mcmeta/data/minecraft/dimension/overworld.json"
+OVERWORLD_PATH = "data/minecraft/dimension/overworld.json"
 RUN_SCRIPT = "python analyse.py"
 FILES_TO_MOVE = [
     "probabilities.json",
@@ -80,15 +80,18 @@ def copy_overworld(commit_hash, copy_to_path):
 
     # shell is no problem because no user input
     subprocess.Popen(CHECKOUT_COMMIT_HASH.format(commit_hash), shell=True).wait()
-    os.chdir("..")
     shutil.copyfile(OVERWORLD_PATH, copy_to_path)
-    os.chdir("scripts")
+    os.chdir("../scripts")
 
 def process_versions(versions_to_process):
     for commit_hash, version in versions_to_process:
         print(f"procesing {version}")
         copy_overworld(commit_hash, "scripts/overworld.json")
-        main_analyse()
+        try:
+            main_analyse()
+        except Exception:
+            # sometime the java versions have some broken overworld.json, like e.g. in 23w07a
+            continue
         for filename in FILES_TO_MOVE:
             shutil.copyfile(f"{filename}", f"../results/{filename}")
         os.chdir("../results")
