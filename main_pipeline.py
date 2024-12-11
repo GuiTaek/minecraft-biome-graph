@@ -86,7 +86,7 @@ def copy_overworld(commit_hash, copy_to_path):
 def process_versions(versions_to_process):
     for commit_hash, version in versions_to_process:
         print(f"procesing {version}")
-        copy_overworld(commit_hash, "scripts/overworld.json")
+        copy_overworld(commit_hash, "../scripts/overworld.json")
         try:
             main_analyse()
         except Exception:
