@@ -1,0 +1,667 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d0" for="node" attr.name="description" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="minecraft:snowy_plains">
+      <data key="d0">minecraft:snowy_plains</data>
+    </node>
+    <node id="minecraft:old_growth_spruce_taiga">
+      <data key="d0">minecraft:old_growth_spruce_taiga</data>
+    </node>
+    <node id="minecraft:taiga">
+      <data key="d0">minecraft:taiga</data>
+    </node>
+    <node id="minecraft:windswept_gravelly_hills">
+      <data key="d0">minecraft:windswept_gravelly_hills</data>
+    </node>
+    <node id="minecraft:ocean">
+      <data key="d0">minecraft:ocean</data>
+    </node>
+    <node id="minecraft:snowy_taiga">
+      <data key="d0">minecraft:snowy_taiga</data>
+    </node>
+    <node id="minecraft:plains">
+      <data key="d0">minecraft:plains</data>
+    </node>
+    <node id="minecraft:river">
+      <data key="d0">minecraft:river</data>
+    </node>
+    <node id="minecraft:stony_shore">
+      <data key="d0">minecraft:stony_shore</data>
+    </node>
+    <node id="minecraft:warm_ocean">
+      <data key="d0">minecraft:warm_ocean</data>
+    </node>
+    <node id="minecraft:snowy_beach">
+      <data key="d0">minecraft:snowy_beach</data>
+    </node>
+    <node id="minecraft:windswept_hills">
+      <data key="d0">minecraft:windswept_hills</data>
+    </node>
+    <node id="minecraft:frozen_ocean">
+      <data key="d0">minecraft:frozen_ocean</data>
+    </node>
+    <node id="minecraft:mushroom_fields">
+      <data key="d0">minecraft:mushroom_fields</data>
+    </node>
+    <node id="minecraft:grove">
+      <data key="d0">minecraft:grove</data>
+    </node>
+    <node id="minecraft:sparse_jungle">
+      <data key="d0">minecraft:sparse_jungle</data>
+    </node>
+    <node id="minecraft:flower_forest">
+      <data key="d0">minecraft:flower_forest</data>
+    </node>
+    <node id="minecraft:jungle">
+      <data key="d0">minecraft:jungle</data>
+    </node>
+    <node id="minecraft:bamboo_jungle">
+      <data key="d0">minecraft:bamboo_jungle</data>
+    </node>
+    <node id="minecraft:lukewarm_ocean">
+      <data key="d0">minecraft:lukewarm_ocean</data>
+    </node>
+    <node id="minecraft:desert">
+      <data key="d0">minecraft:desert</data>
+    </node>
+    <node id="minecraft:swamp">
+      <data key="d0">minecraft:swamp</data>
+    </node>
+    <node id="minecraft:cold_ocean">
+      <data key="d0">minecraft:cold_ocean</data>
+    </node>
+    <node id="minecraft:old_growth_pine_taiga">
+      <data key="d0">minecraft:old_growth_pine_taiga</data>
+    </node>
+    <node id="minecraft:ice_spikes">
+      <data key="d0">minecraft:ice_spikes</data>
+    </node>
+    <node id="minecraft:deep_frozen_ocean">
+      <data key="d0">minecraft:deep_frozen_ocean</data>
+    </node>
+    <node id="minecraft:snowy_slopes">
+      <data key="d0">minecraft:snowy_slopes</data>
+    </node>
+    <node id="minecraft:deep_cold_ocean">
+      <data key="d0">minecraft:deep_cold_ocean</data>
+    </node>
+    <node id="minecraft:windswept_forest">
+      <data key="d0">minecraft:windswept_forest</data>
+    </node>
+    <node id="minecraft:old_growth_birch_forest">
+      <data key="d0">minecraft:old_growth_birch_forest</data>
+    </node>
+    <node id="minecraft:deep_ocean">
+      <data key="d0">minecraft:deep_ocean</data>
+    </node>
+    <node id="minecraft:frozen_peaks">
+      <data key="d0">minecraft:frozen_peaks</data>
+    </node>
+    <node id="minecraft:frozen_river">
+      <data key="d0">minecraft:frozen_river</data>
+    </node>
+    <node id="minecraft:dark_forest">
+      <data key="d0">minecraft:dark_forest</data>
+    </node>
+    <node id="minecraft:savanna_plateau">
+      <data key="d0">minecraft:savanna_plateau</data>
+    </node>
+    <node id="minecraft:sunflower_plains">
+      <data key="d0">minecraft:sunflower_plains</data>
+    </node>
+    <node id="minecraft:savanna">
+      <data key="d0">minecraft:savanna</data>
+    </node>
+    <node id="minecraft:birch_forest">
+      <data key="d0">minecraft:birch_forest</data>
+    </node>
+    <node id="minecraft:forest">
+      <data key="d0">minecraft:forest</data>
+    </node>
+    <node id="minecraft:meadow">
+      <data key="d0">minecraft:meadow</data>
+    </node>
+    <node id="minecraft:wooded_badlands">
+      <data key="d0">minecraft:wooded_badlands</data>
+    </node>
+    <node id="minecraft:stony_peaks">
+      <data key="d0">minecraft:stony_peaks</data>
+    </node>
+    <node id="minecraft:badlands">
+      <data key="d0">minecraft:badlands</data>
+    </node>
+    <node id="minecraft:beach">
+      <data key="d0">minecraft:beach</data>
+    </node>
+    <node id="minecraft:eroded_badlands">
+      <data key="d0">minecraft:eroded_badlands</data>
+    </node>
+    <node id="minecraft:jagged_peaks">
+      <data key="d0">minecraft:jagged_peaks</data>
+    </node>
+    <node id="minecraft:windswept_savanna">
+      <data key="d0">minecraft:windswept_savanna</data>
+    </node>
+    <node id="minecraft:deep_lukewarm_ocean">
+      <data key="d0">minecraft:deep_lukewarm_ocean</data>
+    </node>
+    <edge source="minecraft:snowy_plains" target="minecraft:snowy_slopes">
+      <data key="d1">4.64</data>
+    </edge>
+    <edge source="minecraft:snowy_plains" target="minecraft:plains">
+      <data key="d1">5.05</data>
+    </edge>
+    <edge source="minecraft:snowy_plains" target="minecraft:snowy_beach">
+      <data key="d1">6.48</data>
+    </edge>
+    <edge source="minecraft:snowy_plains" target="minecraft:windswept_gravelly_hills">
+      <data key="d1">7.22</data>
+    </edge>
+    <edge source="minecraft:snowy_plains" target="minecraft:snowy_taiga">
+      <data key="d1">5.71</data>
+    </edge>
+    <edge source="minecraft:snowy_plains" target="minecraft:forest">
+      <data key="d1">2.6</data>
+    </edge>
+    <edge source="minecraft:snowy_plains" target="minecraft:windswept_hills">
+      <data key="d1">2.27</data>
+    </edge>
+    <edge source="minecraft:snowy_plains" target="minecraft:frozen_river">
+      <data key="d1">8.13</data>
+    </edge>
+    <edge source="minecraft:snowy_plains" target="minecraft:ice_spikes">
+      <data key="d1">7.68</data>
+    </edge>
+    <edge source="minecraft:old_growth_spruce_taiga" target="minecraft:grove">
+      <data key="d1">2.24</data>
+    </edge>
+    <edge source="minecraft:old_growth_spruce_taiga" target="minecraft:taiga">
+      <data key="d1">11.4</data>
+    </edge>
+    <edge source="minecraft:old_growth_spruce_taiga" target="minecraft:dark_forest">
+      <data key="d1">4.99</data>
+    </edge>
+    <edge source="minecraft:old_growth_spruce_taiga" target="minecraft:windswept_forest">
+      <data key="d1">2.99</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:grove">
+      <data key="d1">4.44</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:snowy_taiga">
+      <data key="d1">12.4</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:windswept_forest">
+      <data key="d1">7.39</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:forest">
+      <data key="d1">3.73</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:birch_forest">
+      <data key="d1">4.24</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:meadow">
+      <data key="d1">2.37</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:river">
+      <data key="d1">2.67</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:old_growth_pine_taiga">
+      <data key="d1">11.0</data>
+    </edge>
+    <edge source="minecraft:taiga" target="minecraft:old_growth_birch_forest">
+      <data key="d1">4.49</data>
+    </edge>
+    <edge source="minecraft:windswept_gravelly_hills" target="minecraft:swamp">
+      <data key="d1">3.39</data>
+    </edge>
+    <edge source="minecraft:windswept_gravelly_hills" target="minecraft:windswept_hills">
+      <data key="d1">6.84</data>
+    </edge>
+    <edge source="minecraft:windswept_gravelly_hills" target="minecraft:plains">
+      <data key="d1">6.67</data>
+    </edge>
+    <edge source="minecraft:windswept_gravelly_hills" target="minecraft:ice_spikes">
+      <data key="d1">3.1</data>
+    </edge>
+    <edge source="minecraft:ocean" target="minecraft:cold_ocean">
+      <data key="d1">7.14</data>
+    </edge>
+    <edge source="minecraft:ocean" target="minecraft:deep_ocean">
+      <data key="d1">13.9</data>
+    </edge>
+    <edge source="minecraft:ocean" target="minecraft:lukewarm_ocean">
+      <data key="d1">7.13</data>
+    </edge>
+    <edge source="minecraft:ocean" target="minecraft:stony_shore">
+      <data key="d1">3.73</data>
+    </edge>
+    <edge source="minecraft:ocean" target="minecraft:beach">
+      <data key="d1">6.32</data>
+    </edge>
+    <edge source="minecraft:snowy_taiga" target="minecraft:grove">
+      <data key="d1">5.02</data>
+    </edge>
+    <edge source="minecraft:snowy_taiga" target="minecraft:snowy_beach">
+      <data key="d1">5.48</data>
+    </edge>
+    <edge source="minecraft:snowy_taiga" target="minecraft:windswept_forest">
+      <data key="d1">4.35</data>
+    </edge>
+    <edge source="minecraft:snowy_taiga" target="minecraft:frozen_river">
+      <data key="d1">7.92</data>
+    </edge>
+    <edge source="minecraft:snowy_taiga" target="minecraft:forest">
+      <data key="d1">2.77</data>
+    </edge>
+    <edge source="minecraft:snowy_taiga" target="minecraft:windswept_hills">
+      <data key="d1">2.49</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:stony_shore">
+      <data key="d1">2.87</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:swamp">
+      <data key="d1">3.77</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:snowy_slopes">
+      <data key="d1">5.46</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:meadow">
+      <data key="d1">7.08</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:flower_forest">
+      <data key="d1">8.06</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:beach">
+      <data key="d1">4.18</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:forest">
+      <data key="d1">7.38</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:savanna">
+      <data key="d1">6.0</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:windswept_hills">
+      <data key="d1">4.44</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:river">
+      <data key="d1">5.93</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:ice_spikes">
+      <data key="d1">2.23</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:sunflower_plains">
+      <data key="d1">8.2</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:sparse_jungle">
+      <data key="d1">3.12</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:badlands">
+      <data key="d1">2.09</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:windswept_savanna">
+      <data key="d1">3.01</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:stony_shore">
+      <data key="d1">2.51</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:beach">
+      <data key="d1">4.98</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:forest">
+      <data key="d1">5.75</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:birch_forest">
+      <data key="d1">2.38</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:dark_forest">
+      <data key="d1">2.41</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:savanna">
+      <data key="d1">3.59</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:jungle">
+      <data key="d1">2.35</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:desert">
+      <data key="d1">2.83</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:frozen_river">
+      <data key="d1">5.97</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:old_growth_birch_forest">
+      <data key="d1">2.72</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:sparse_jungle">
+      <data key="d1">2.2</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:swamp">
+      <data key="d1">4.0</data>
+    </edge>
+    <edge source="minecraft:stony_shore" target="minecraft:frozen_ocean">
+      <data key="d1">2.23</data>
+    </edge>
+    <edge source="minecraft:stony_shore" target="minecraft:cold_ocean">
+      <data key="d1">3.04</data>
+    </edge>
+    <edge source="minecraft:stony_shore" target="minecraft:lukewarm_ocean">
+      <data key="d1">3.04</data>
+    </edge>
+    <edge source="minecraft:stony_shore" target="minecraft:forest">
+      <data key="d1">2.85</data>
+    </edge>
+    <edge source="minecraft:stony_shore" target="minecraft:beach">
+      <data key="d1">3.26</data>
+    </edge>
+    <edge source="minecraft:warm_ocean" target="minecraft:mushroom_fields">
+      <data key="d1">26.0</data>
+    </edge>
+    <edge source="minecraft:warm_ocean" target="minecraft:deep_lukewarm_ocean">
+      <data key="d1">8.95</data>
+    </edge>
+    <edge source="minecraft:warm_ocean" target="minecraft:lukewarm_ocean">
+      <data key="d1">12.2</data>
+    </edge>
+    <edge source="minecraft:warm_ocean" target="minecraft:desert">
+      <data key="d1">4.43</data>
+    </edge>
+    <edge source="minecraft:snowy_beach" target="minecraft:frozen_ocean">
+      <data key="d1">9.65</data>
+    </edge>
+    <edge source="minecraft:snowy_beach" target="minecraft:beach">
+      <data key="d1">6.38</data>
+    </edge>
+    <edge source="minecraft:snowy_beach" target="minecraft:frozen_river">
+      <data key="d1">5.1</data>
+    </edge>
+    <edge source="minecraft:windswept_hills" target="minecraft:swamp">
+      <data key="d1">7.85</data>
+    </edge>
+    <edge source="minecraft:windswept_hills" target="minecraft:windswept_forest">
+      <data key="d1">4.91</data>
+    </edge>
+    <edge source="minecraft:windswept_hills" target="minecraft:forest">
+      <data key="d1">8.41</data>
+    </edge>
+    <edge source="minecraft:windswept_hills" target="minecraft:flower_forest">
+      <data key="d1">2.67</data>
+    </edge>
+    <edge source="minecraft:windswept_hills" target="minecraft:sunflower_plains">
+      <data key="d1">2.14</data>
+    </edge>
+    <edge source="minecraft:frozen_ocean" target="minecraft:deep_frozen_ocean">
+      <data key="d1">13.9</data>
+    </edge>
+    <edge source="minecraft:frozen_ocean" target="minecraft:cold_ocean">
+      <data key="d1">12.0</data>
+    </edge>
+    <edge source="minecraft:mushroom_fields" target="minecraft:deep_frozen_ocean">
+      <data key="d1">55.9</data>
+    </edge>
+    <edge source="minecraft:mushroom_fields" target="minecraft:deep_cold_ocean">
+      <data key="d1">76.3</data>
+    </edge>
+    <edge source="minecraft:mushroom_fields" target="minecraft:deep_ocean">
+      <data key="d1">93.6</data>
+    </edge>
+    <edge source="minecraft:mushroom_fields" target="minecraft:deep_lukewarm_ocean">
+      <data key="d1">76.4</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:snowy_slopes">
+      <data key="d1">4.22</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:jagged_peaks">
+      <data key="d1">38.1</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:forest">
+      <data key="d1">5.47</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:meadow">
+      <data key="d1">6.56</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:birch_forest">
+      <data key="d1">2.88</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:dark_forest">
+      <data key="d1">2.73</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:old_growth_pine_taiga">
+      <data key="d1">2.2</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:frozen_peaks">
+      <data key="d1">38.2</data>
+    </edge>
+    <edge source="minecraft:sparse_jungle" target="minecraft:old_growth_birch_forest">
+      <data key="d1">7.07</data>
+    </edge>
+    <edge source="minecraft:sparse_jungle" target="minecraft:bamboo_jungle">
+      <data key="d1">12.5</data>
+    </edge>
+    <edge source="minecraft:sparse_jungle" target="minecraft:wooded_badlands">
+      <data key="d1">5.07</data>
+    </edge>
+    <edge source="minecraft:sparse_jungle" target="minecraft:desert">
+      <data key="d1">3.83</data>
+    </edge>
+    <edge source="minecraft:sparse_jungle" target="minecraft:windswept_savanna">
+      <data key="d1">2.64</data>
+    </edge>
+    <edge source="minecraft:flower_forest" target="minecraft:meadow">
+      <data key="d1">2.16</data>
+    </edge>
+    <edge source="minecraft:flower_forest" target="minecraft:savanna">
+      <data key="d1">2.31</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:swamp">
+      <data key="d1">2.05</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:birch_forest">
+      <data key="d1">5.45</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:dark_forest">
+      <data key="d1">3.01</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:forest">
+      <data key="d1">3.91</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:wooded_badlands">
+      <data key="d1">6.55</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:desert">
+      <data key="d1">4.53</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:beach">
+      <data key="d1">2.12</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:stony_peaks">
+      <data key="d1">3.98</data>
+    </edge>
+    <edge source="minecraft:jungle" target="minecraft:bamboo_jungle">
+      <data key="d1">2.51</data>
+    </edge>
+    <edge source="minecraft:bamboo_jungle" target="minecraft:dark_forest">
+      <data key="d1">4.86</data>
+    </edge>
+    <edge source="minecraft:bamboo_jungle" target="minecraft:wooded_badlands">
+      <data key="d1">3.41</data>
+    </edge>
+    <edge source="minecraft:bamboo_jungle" target="minecraft:desert">
+      <data key="d1">2.64</data>
+    </edge>
+    <edge source="minecraft:lukewarm_ocean" target="minecraft:deep_lukewarm_ocean">
+      <data key="d1">13.9</data>
+    </edge>
+    <edge source="minecraft:lukewarm_ocean" target="minecraft:beach">
+      <data key="d1">5.16</data>
+    </edge>
+    <edge source="minecraft:desert" target="minecraft:swamp">
+      <data key="d1">3.48</data>
+    </edge>
+    <edge source="minecraft:desert" target="minecraft:savanna">
+      <data key="d1">6.57</data>
+    </edge>
+    <edge source="minecraft:desert" target="minecraft:beach">
+      <data key="d1">2.39</data>
+    </edge>
+    <edge source="minecraft:desert" target="minecraft:eroded_badlands">
+      <data key="d1">2.85</data>
+    </edge>
+    <edge source="minecraft:desert" target="minecraft:badlands">
+      <data key="d1">4.75</data>
+    </edge>
+    <edge source="minecraft:desert" target="minecraft:wooded_badlands">
+      <data key="d1">3.99</data>
+    </edge>
+    <edge source="minecraft:desert" target="minecraft:windswept_savanna">
+      <data key="d1">3.16</data>
+    </edge>
+    <edge source="minecraft:swamp" target="minecraft:forest">
+      <data key="d1">3.83</data>
+    </edge>
+    <edge source="minecraft:swamp" target="minecraft:windswept_forest">
+      <data key="d1">6.08</data>
+    </edge>
+    <edge source="minecraft:swamp" target="minecraft:savanna">
+      <data key="d1">2.71</data>
+    </edge>
+    <edge source="minecraft:swamp" target="minecraft:windswept_savanna">
+      <data key="d1">8.74</data>
+    </edge>
+    <edge source="minecraft:cold_ocean" target="minecraft:deep_cold_ocean">
+      <data key="d1">13.9</data>
+    </edge>
+    <edge source="minecraft:cold_ocean" target="minecraft:beach">
+      <data key="d1">5.15</data>
+    </edge>
+    <edge source="minecraft:old_growth_pine_taiga" target="minecraft:dark_forest">
+      <data key="d1">5.1</data>
+    </edge>
+    <edge source="minecraft:old_growth_pine_taiga" target="minecraft:windswept_forest">
+      <data key="d1">2.94</data>
+    </edge>
+    <edge source="minecraft:ice_spikes" target="minecraft:snowy_slopes">
+      <data key="d1">2.36</data>
+    </edge>
+    <edge source="minecraft:ice_spikes" target="minecraft:frozen_river">
+      <data key="d1">2.49</data>
+    </edge>
+    <edge source="minecraft:deep_frozen_ocean" target="minecraft:deep_cold_ocean">
+      <data key="d1">12.0</data>
+    </edge>
+    <edge source="minecraft:snowy_slopes" target="minecraft:jagged_peaks">
+      <data key="d1">27.4</data>
+    </edge>
+    <edge source="minecraft:snowy_slopes" target="minecraft:meadow">
+      <data key="d1">11.3</data>
+    </edge>
+    <edge source="minecraft:snowy_slopes" target="minecraft:frozen_peaks">
+      <data key="d1">27.5</data>
+    </edge>
+    <edge source="minecraft:deep_cold_ocean" target="minecraft:deep_ocean">
+      <data key="d1">7.14</data>
+    </edge>
+    <edge source="minecraft:windswept_forest" target="minecraft:birch_forest">
+      <data key="d1">5.42</data>
+    </edge>
+    <edge source="minecraft:windswept_forest" target="minecraft:dark_forest">
+      <data key="d1">5.14</data>
+    </edge>
+    <edge source="minecraft:windswept_forest" target="minecraft:old_growth_birch_forest">
+      <data key="d1">4.5</data>
+    </edge>
+    <edge source="minecraft:old_growth_birch_forest" target="minecraft:birch_forest">
+      <data key="d1">3.54</data>
+    </edge>
+    <edge source="minecraft:old_growth_birch_forest" target="minecraft:forest">
+      <data key="d1">3.53</data>
+    </edge>
+    <edge source="minecraft:old_growth_birch_forest" target="minecraft:dark_forest">
+      <data key="d1">8.61</data>
+    </edge>
+    <edge source="minecraft:old_growth_birch_forest" target="minecraft:windswept_savanna">
+      <data key="d1">3.06</data>
+    </edge>
+    <edge source="minecraft:deep_ocean" target="minecraft:deep_lukewarm_ocean">
+      <data key="d1">7.13</data>
+    </edge>
+    <edge source="minecraft:frozen_peaks" target="minecraft:stony_peaks">
+      <data key="d1">3.54</data>
+    </edge>
+    <edge source="minecraft:frozen_peaks" target="minecraft:meadow">
+      <data key="d1">2.32</data>
+    </edge>
+    <edge source="minecraft:dark_forest" target="minecraft:birch_forest">
+      <data key="d1">8.82</data>
+    </edge>
+    <edge source="minecraft:savanna_plateau" target="minecraft:meadow">
+      <data key="d1">3.67</data>
+    </edge>
+    <edge source="minecraft:savanna_plateau" target="minecraft:savanna">
+      <data key="d1">13.2</data>
+    </edge>
+    <edge source="minecraft:savanna_plateau" target="minecraft:badlands">
+      <data key="d1">2.79</data>
+    </edge>
+    <edge source="minecraft:savanna_plateau" target="minecraft:stony_peaks">
+      <data key="d1">25.6</data>
+    </edge>
+    <edge source="minecraft:savanna_plateau" target="minecraft:eroded_badlands">
+      <data key="d1">4.85</data>
+    </edge>
+    <edge source="minecraft:sunflower_plains" target="minecraft:savanna">
+      <data key="d1">2.35</data>
+    </edge>
+    <edge source="minecraft:sunflower_plains" target="minecraft:meadow">
+      <data key="d1">2.13</data>
+    </edge>
+    <edge source="minecraft:savanna" target="minecraft:eroded_badlands">
+      <data key="d1">5.84</data>
+    </edge>
+    <edge source="minecraft:savanna" target="minecraft:beach">
+      <data key="d1">2.58</data>
+    </edge>
+    <edge source="minecraft:savanna" target="minecraft:badlands">
+      <data key="d1">3.63</data>
+    </edge>
+    <edge source="minecraft:savanna" target="minecraft:windswept_savanna">
+      <data key="d1">2.27</data>
+    </edge>
+    <edge source="minecraft:birch_forest" target="minecraft:forest">
+      <data key="d1">3.81</data>
+    </edge>
+    <edge source="minecraft:birch_forest" target="minecraft:meadow">
+      <data key="d1">4.24</data>
+    </edge>
+    <edge source="minecraft:birch_forest" target="minecraft:beach">
+      <data key="d1">2.15</data>
+    </edge>
+    <edge source="minecraft:forest" target="minecraft:meadow">
+      <data key="d1">5.26</data>
+    </edge>
+    <edge source="minecraft:forest" target="minecraft:beach">
+      <data key="d1">4.38</data>
+    </edge>
+    <edge source="minecraft:forest" target="minecraft:badlands">
+      <data key="d1">2.77</data>
+    </edge>
+    <edge source="minecraft:forest" target="minecraft:stony_peaks">
+      <data key="d1">7.73</data>
+    </edge>
+    <edge source="minecraft:meadow" target="minecraft:jagged_peaks">
+      <data key="d1">2.78</data>
+    </edge>
+    <edge source="minecraft:wooded_badlands" target="minecraft:badlands">
+      <data key="d1">4.88</data>
+    </edge>
+    <edge source="minecraft:stony_peaks" target="minecraft:jagged_peaks">
+      <data key="d1">3.55</data>
+    </edge>
+    <edge source="minecraft:badlands" target="minecraft:eroded_badlands">
+      <data key="d1">16.3</data>
+    </edge>
+    <edge source="minecraft:beach" target="minecraft:windswept_savanna">
+      <data key="d1">4.9</data>
+    </edge>
+  </graph>
+</graphml>
