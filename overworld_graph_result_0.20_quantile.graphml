@@ -96,6 +96,9 @@
     <node id="minecraft:deep_ocean">
       <data key="d0">minecraft:deep_ocean</data>
     </node>
+    <node id="minecraft:mangrove_swamp">
+      <data key="d0">minecraft:mangrove_swamp</data>
+    </node>
     <node id="minecraft:frozen_peaks">
       <data key="d0">minecraft:frozen_peaks</data>
     </node>
@@ -241,7 +244,7 @@
       <data key="d1">6.38</data>
     </edge>
     <edge source="minecraft:windswept_hills" target="minecraft:swamp">
-      <data key="d1">7.85</data>
+      <data key="d1">9.72</data>
     </edge>
     <edge source="minecraft:windswept_hills" target="minecraft:forest">
       <data key="d1">8.41</data>
@@ -294,14 +297,17 @@
     <edge source="minecraft:lukewarm_ocean" target="minecraft:beach">
       <data key="d1">5.16</data>
     </edge>
+    <edge source="minecraft:desert" target="minecraft:mangrove_swamp">
+      <data key="d1">5.91</data>
+    </edge>
     <edge source="minecraft:desert" target="minecraft:savanna">
       <data key="d1">6.57</data>
     </edge>
     <edge source="minecraft:swamp" target="minecraft:windswept_forest">
-      <data key="d1">6.08</data>
+      <data key="d1">7.53</data>
     </edge>
     <edge source="minecraft:swamp" target="minecraft:windswept_savanna">
-      <data key="d1">8.74</data>
+      <data key="d1">5.73</data>
     </edge>
     <edge source="minecraft:cold_ocean" target="minecraft:deep_cold_ocean">
       <data key="d1">13.9</data>
@@ -327,14 +333,14 @@
     <edge source="minecraft:windswept_forest" target="minecraft:birch_forest">
       <data key="d1">5.42</data>
     </edge>
-    <edge source="minecraft:windswept_forest" target="minecraft:dark_forest">
-      <data key="d1">5.14</data>
-    </edge>
     <edge source="minecraft:old_growth_birch_forest" target="minecraft:dark_forest">
       <data key="d1">8.61</data>
     </edge>
     <edge source="minecraft:deep_ocean" target="minecraft:deep_lukewarm_ocean">
       <data key="d1">7.13</data>
+    </edge>
+    <edge source="minecraft:mangrove_swamp" target="minecraft:windswept_savanna">
+      <data key="d1">6.97</data>
     </edge>
     <edge source="minecraft:dark_forest" target="minecraft:birch_forest">
       <data key="d1">8.82</data>
