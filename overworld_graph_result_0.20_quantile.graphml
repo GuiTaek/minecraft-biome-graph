@@ -132,6 +132,9 @@
     <node id="minecraft:stony_peaks">
       <data key="d0">minecraft:stony_peaks</data>
     </node>
+    <node id="minecraft:cherry_grove">
+      <data key="d0">minecraft:cherry_grove</data>
+    </node>
     <node id="minecraft:badlands">
       <data key="d0">minecraft:badlands</data>
     </node>
@@ -205,7 +208,7 @@
       <data key="d1">5.46</data>
     </edge>
     <edge source="minecraft:plains" target="minecraft:meadow">
-      <data key="d1">7.08</data>
+      <data key="d1">5.35</data>
     </edge>
     <edge source="minecraft:plains" target="minecraft:flower_forest">
       <data key="d1">8.06</data>
@@ -221,6 +224,9 @@
     </edge>
     <edge source="minecraft:plains" target="minecraft:sunflower_plains">
       <data key="d1">8.2</data>
+    </edge>
+    <edge source="minecraft:plains" target="minecraft:cherry_grove">
+      <data key="d1">5.2</data>
     </edge>
     <edge source="minecraft:river" target="minecraft:forest">
       <data key="d1">5.75</data>
@@ -274,7 +280,7 @@
       <data key="d1">5.47</data>
     </edge>
     <edge source="minecraft:grove" target="minecraft:meadow">
-      <data key="d1">6.56</data>
+      <data key="d1">7.29</data>
     </edge>
     <edge source="minecraft:grove" target="minecraft:frozen_peaks">
       <data key="d1">38.2</data>
@@ -322,10 +328,13 @@
       <data key="d1">27.4</data>
     </edge>
     <edge source="minecraft:snowy_slopes" target="minecraft:meadow">
-      <data key="d1">11.3</data>
+      <data key="d1">8.32</data>
     </edge>
     <edge source="minecraft:snowy_slopes" target="minecraft:frozen_peaks">
       <data key="d1">27.5</data>
+    </edge>
+    <edge source="minecraft:snowy_slopes" target="minecraft:cherry_grove">
+      <data key="d1">8.67</data>
     </edge>
     <edge source="minecraft:deep_cold_ocean" target="minecraft:deep_ocean">
       <data key="d1">7.14</data>
@@ -355,7 +364,7 @@
       <data key="d1">6.09</data>
     </edge>
     <edge source="minecraft:forest" target="minecraft:meadow">
-      <data key="d1">5.26</data>
+      <data key="d1">5.47</data>
     </edge>
     <edge source="minecraft:forest" target="minecraft:stony_peaks">
       <data key="d1">7.73</data>
