@@ -138,6 +138,9 @@
     <node id="minecraft:badlands">
       <data key="d0">minecraft:badlands</data>
     </node>
+    <node id="minecraft:pale_garden">
+      <data key="d0">minecraft:pale_garden</data>
+    </node>
     <node id="minecraft:beach">
       <data key="d0">minecraft:beach</data>
     </node>
@@ -187,7 +190,7 @@
       <data key="d1">11.4</data>
     </edge>
     <edge source="minecraft:old_growth_spruce_taiga" target="minecraft:dark_forest">
-      <data key="d1">4.99</data>
+      <data key="d1">5.09</data>
     </edge>
     <edge source="minecraft:old_growth_spruce_taiga" target="minecraft:windswept_forest">
       <data key="d1">2.99</data>
@@ -325,7 +328,7 @@
       <data key="d1">2.38</data>
     </edge>
     <edge source="minecraft:river" target="minecraft:dark_forest">
-      <data key="d1">2.41</data>
+      <data key="d1">2.45</data>
     </edge>
     <edge source="minecraft:river" target="minecraft:savanna">
       <data key="d1">3.59</data>
@@ -436,13 +439,16 @@
       <data key="d1">2.88</data>
     </edge>
     <edge source="minecraft:grove" target="minecraft:dark_forest">
-      <data key="d1">2.73</data>
+      <data key="d1">2.15</data>
     </edge>
     <edge source="minecraft:grove" target="minecraft:old_growth_pine_taiga">
       <data key="d1">2.2</data>
     </edge>
     <edge source="minecraft:grove" target="minecraft:frozen_peaks">
       <data key="d1">38.2</data>
+    </edge>
+    <edge source="minecraft:grove" target="minecraft:pale_garden">
+      <data key="d1">3.23</data>
     </edge>
     <edge source="minecraft:sparse_jungle" target="minecraft:old_growth_birch_forest">
       <data key="d1">7.07</data>
@@ -475,7 +481,7 @@
       <data key="d1">5.45</data>
     </edge>
     <edge source="minecraft:jungle" target="minecraft:dark_forest">
-      <data key="d1">3.01</data>
+      <data key="d1">2.85</data>
     </edge>
     <edge source="minecraft:jungle" target="minecraft:forest">
       <data key="d1">3.91</data>
@@ -493,7 +499,7 @@
       <data key="d1">2.51</data>
     </edge>
     <edge source="minecraft:bamboo_jungle" target="minecraft:dark_forest">
-      <data key="d1">4.86</data>
+      <data key="d1">4.96</data>
     </edge>
     <edge source="minecraft:bamboo_jungle" target="minecraft:wooded_badlands">
       <data key="d1">3.41</data>
@@ -547,7 +553,7 @@
       <data key="d1">5.15</data>
     </edge>
     <edge source="minecraft:old_growth_pine_taiga" target="minecraft:dark_forest">
-      <data key="d1">5.1</data>
+      <data key="d1">4.82</data>
     </edge>
     <edge source="minecraft:old_growth_pine_taiga" target="minecraft:windswept_forest">
       <data key="d1">2.94</data>
@@ -580,7 +586,7 @@
       <data key="d1">5.42</data>
     </edge>
     <edge source="minecraft:windswept_forest" target="minecraft:dark_forest">
-      <data key="d1">5.14</data>
+      <data key="d1">5.24</data>
     </edge>
     <edge source="minecraft:windswept_forest" target="minecraft:old_growth_birch_forest">
       <data key="d1">4.5</data>
@@ -592,7 +598,7 @@
       <data key="d1">3.53</data>
     </edge>
     <edge source="minecraft:old_growth_birch_forest" target="minecraft:dark_forest">
-      <data key="d1">8.61</data>
+      <data key="d1">8.78</data>
     </edge>
     <edge source="minecraft:old_growth_birch_forest" target="minecraft:windswept_savanna">
       <data key="d1">3.06</data>
@@ -613,7 +619,10 @@
       <data key="d1">2.22</data>
     </edge>
     <edge source="minecraft:dark_forest" target="minecraft:birch_forest">
-      <data key="d1">8.82</data>
+      <data key="d1">8.3</data>
+    </edge>
+    <edge source="minecraft:dark_forest" target="minecraft:pale_garden">
+      <data key="d1">7.81</data>
     </edge>
     <edge source="minecraft:savanna_plateau" target="minecraft:savanna">
       <data key="d1">13.2</data>
@@ -656,6 +665,9 @@
     </edge>
     <edge source="minecraft:birch_forest" target="minecraft:beach">
       <data key="d1">2.15</data>
+    </edge>
+    <edge source="minecraft:birch_forest" target="minecraft:pale_garden">
+      <data key="d1">3.48</data>
     </edge>
     <edge source="minecraft:forest" target="minecraft:meadow">
       <data key="d1">5.47</data>
