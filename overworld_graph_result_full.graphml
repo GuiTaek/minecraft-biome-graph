@@ -451,7 +451,7 @@
       <data key="d1">3.12</data>
     </edge>
     <edge source="minecraft:plains" target="minecraft:badlands">
-      <data key="d1">2.09</data>
+      <data key="d1">2.11</data>
     </edge>
     <edge source="minecraft:plains" target="minecraft:windswept_savanna">
       <data key="d1">3.01</data>
@@ -498,14 +498,11 @@
     <edge source="minecraft:river" target="minecraft:jungle">
       <data key="d1">2.35</data>
     </edge>
-    <edge source="minecraft:river" target="minecraft:eroded_badlands">
-      <data key="d1">0.824</data>
+    <edge source="minecraft:river" target="minecraft:badlands">
+      <data key="d1">1.52</data>
     </edge>
     <edge source="minecraft:river" target="minecraft:desert">
       <data key="d1">2.83</data>
-    </edge>
-    <edge source="minecraft:river" target="minecraft:badlands">
-      <data key="d1">1.65</data>
     </edge>
     <edge source="minecraft:river" target="minecraft:wooded_badlands">
       <data key="d1">1.32</data>
@@ -527,6 +524,9 @@
     </edge>
     <edge source="minecraft:river" target="minecraft:bamboo_jungle">
       <data key="d1">1.5</data>
+    </edge>
+    <edge source="minecraft:river" target="minecraft:eroded_badlands">
+      <data key="d1">1.04</data>
     </edge>
     <edge source="minecraft:river" target="minecraft:swamp">
       <data key="d1">4.0</data>
@@ -574,10 +574,7 @@
       <data key="d1">1.22</data>
     </edge>
     <edge source="minecraft:stony_shore" target="minecraft:badlands">
-      <data key="d1">0.533</data>
-    </edge>
-    <edge source="minecraft:stony_shore" target="minecraft:eroded_badlands">
-      <data key="d1">0.32</data>
+      <data key="d1">0.537</data>
     </edge>
     <edge source="minecraft:stony_shore" target="minecraft:desert">
       <data key="d1">1.77</data>
@@ -612,6 +609,9 @@
     <edge source="minecraft:stony_shore" target="minecraft:bamboo_jungle">
       <data key="d1">0.69</data>
     </edge>
+    <edge source="minecraft:stony_shore" target="minecraft:eroded_badlands">
+      <data key="d1">0.312</data>
+    </edge>
     <edge source="minecraft:warm_ocean" target="minecraft:mushroom_fields">
       <data key="d1">26.0</data>
     </edge>
@@ -624,17 +624,17 @@
     <edge source="minecraft:warm_ocean" target="minecraft:desert">
       <data key="d1">4.43</data>
     </edge>
-    <edge source="minecraft:warm_ocean" target="minecraft:eroded_badlands">
-      <data key="d1">0.029</data>
-    </edge>
     <edge source="minecraft:warm_ocean" target="minecraft:badlands">
-      <data key="d1">0.0482</data>
+      <data key="d1">0.0487</data>
     </edge>
     <edge source="minecraft:warm_ocean" target="minecraft:wooded_badlands">
       <data key="d1">0.0405</data>
     </edge>
     <edge source="minecraft:warm_ocean" target="minecraft:windswept_savanna">
       <data key="d1">0.322</data>
+    </edge>
+    <edge source="minecraft:warm_ocean" target="minecraft:eroded_badlands">
+      <data key="d1">0.0282</data>
     </edge>
     <edge source="minecraft:snowy_beach" target="minecraft:frozen_ocean">
       <data key="d1">9.65</data>
@@ -891,14 +891,14 @@
     <edge source="minecraft:desert" target="minecraft:forest">
       <data key="d1">1.76</data>
     </edge>
-    <edge source="minecraft:desert" target="minecraft:eroded_badlands">
-      <data key="d1">2.85</data>
-    </edge>
     <edge source="minecraft:desert" target="minecraft:badlands">
-      <data key="d1">4.75</data>
+      <data key="d1">4.79</data>
     </edge>
     <edge source="minecraft:desert" target="minecraft:wooded_badlands">
       <data key="d1">3.99</data>
+    </edge>
+    <edge source="minecraft:desert" target="minecraft:eroded_badlands">
+      <data key="d1">2.79</data>
     </edge>
     <edge source="minecraft:desert" target="minecraft:windswept_savanna">
       <data key="d1">3.16</data>
@@ -1081,7 +1081,7 @@
       <data key="d1">13.2</data>
     </edge>
     <edge source="minecraft:savanna_plateau" target="minecraft:badlands">
-      <data key="d1">2.79</data>
+      <data key="d1">2.82</data>
     </edge>
     <edge source="minecraft:savanna_plateau" target="minecraft:stony_peaks">
       <data key="d1">25.6</data>
@@ -1090,7 +1090,7 @@
       <data key="d1">1.07</data>
     </edge>
     <edge source="minecraft:savanna_plateau" target="minecraft:eroded_badlands">
-      <data key="d1">4.85</data>
+      <data key="d1">4.72</data>
     </edge>
     <edge source="minecraft:sunflower_plains" target="minecraft:savanna">
       <data key="d1">2.35</data>
@@ -1104,8 +1104,8 @@
     <edge source="minecraft:sunflower_plains" target="minecraft:windswept_savanna">
       <data key="d1">1.72</data>
     </edge>
-    <edge source="minecraft:savanna" target="minecraft:eroded_badlands">
-      <data key="d1">5.84</data>
+    <edge source="minecraft:savanna" target="minecraft:badlands">
+      <data key="d1">3.42</data>
     </edge>
     <edge source="minecraft:savanna" target="minecraft:beach">
       <data key="d1">2.58</data>
@@ -1116,8 +1116,8 @@
     <edge source="minecraft:savanna" target="minecraft:stony_peaks">
       <data key="d1">0.666</data>
     </edge>
-    <edge source="minecraft:savanna" target="minecraft:badlands">
-      <data key="d1">3.63</data>
+    <edge source="minecraft:savanna" target="minecraft:eroded_badlands">
+      <data key="d1">6.09</data>
     </edge>
     <edge source="minecraft:savanna" target="minecraft:windswept_savanna">
       <data key="d1">2.27</data>
@@ -1141,7 +1141,7 @@
       <data key="d1">4.38</data>
     </edge>
     <edge source="minecraft:forest" target="minecraft:badlands">
-      <data key="d1">2.77</data>
+      <data key="d1">2.8</data>
     </edge>
     <edge source="minecraft:forest" target="minecraft:stony_peaks">
       <data key="d1">7.73</data>
@@ -1159,7 +1159,7 @@
       <data key="d1">2.78</data>
     </edge>
     <edge source="minecraft:wooded_badlands" target="minecraft:badlands">
-      <data key="d1">4.88</data>
+      <data key="d1">4.92</data>
     </edge>
     <edge source="minecraft:wooded_badlands" target="minecraft:stony_peaks">
       <data key="d1">1.25</data>
@@ -1167,14 +1167,14 @@
     <edge source="minecraft:stony_peaks" target="minecraft:jagged_peaks">
       <data key="d1">3.55</data>
     </edge>
-    <edge source="minecraft:stony_peaks" target="minecraft:eroded_badlands">
-      <data key="d1">0.896</data>
-    </edge>
     <edge source="minecraft:stony_peaks" target="minecraft:badlands">
-      <data key="d1">1.49</data>
+      <data key="d1">1.5</data>
+    </edge>
+    <edge source="minecraft:stony_peaks" target="minecraft:eroded_badlands">
+      <data key="d1">0.87</data>
     </edge>
     <edge source="minecraft:badlands" target="minecraft:eroded_badlands">
-      <data key="d1">16.3</data>
+      <data key="d1">4.06</data>
     </edge>
     <edge source="minecraft:beach" target="minecraft:windswept_savanna">
       <data key="d1">4.9</data>

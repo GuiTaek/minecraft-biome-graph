@@ -327,6 +327,9 @@
     <edge source="minecraft:windswept_forest" target="minecraft:birch_forest">
       <data key="d1">5.42</data>
     </edge>
+    <edge source="minecraft:windswept_forest" target="minecraft:dark_forest">
+      <data key="d1">5.14</data>
+    </edge>
     <edge source="minecraft:old_growth_birch_forest" target="minecraft:dark_forest">
       <data key="d1">8.61</data>
     </edge>
@@ -343,16 +346,13 @@
       <data key="d1">25.6</data>
     </edge>
     <edge source="minecraft:savanna" target="minecraft:eroded_badlands">
-      <data key="d1">5.84</data>
+      <data key="d1">6.09</data>
     </edge>
     <edge source="minecraft:forest" target="minecraft:meadow">
       <data key="d1">5.26</data>
     </edge>
     <edge source="minecraft:forest" target="minecraft:stony_peaks">
       <data key="d1">7.73</data>
-    </edge>
-    <edge source="minecraft:badlands" target="minecraft:eroded_badlands">
-      <data key="d1">16.3</data>
     </edge>
   </graph>
 </graphml>
