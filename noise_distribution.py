@@ -212,6 +212,10 @@ amplitudes = {
 n = 100_000
 for noise, noise_amplitudes in tqdm(amplitudes.items()):
     noise_cdfs[noise] = generate_function(f"minecraft_{noise}_sorted_vals.txt", n, noise_amplitudes)
+noise_cdfs["depth"] = lambda val: val
+def offset_cdf(val: float):
+    return val
+noise_cdfs["offset"] = offset_cdf
 
 def draw_all_noises():
     room = np.linspace(-10.0, +10.0, 1_000)

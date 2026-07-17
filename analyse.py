@@ -1,6 +1,7 @@
 import json
 import re
 import os
+from copy import deepcopy
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
@@ -8,6 +9,8 @@ import networkx as nx
 from tqdm import tqdm
 import numpy as np
 from noise_distribution import noise_cdfs
+
+EPSILON = 1e-7
 
 def explore_draw_rectangle():
     fig, ax = plt.subplots()
@@ -69,17 +72,30 @@ def values_of_parameters(biomes):
     parameters = get_parameters(biomes)
     res = {}
     for parameter in parameters:
-        # depth is not a noise and offset is always 0
-        if parameter in {"depth", "offset"}:
-            continue
         res[parameter] = set()
         for biome in biomes:
-            if isinstance(biome["parameters"][parameter], float):
-                #print(parameter)
-                #return
-                continue
-            res[parameter].update(biome["parameters"][parameter])
-        res[parameter] = list(sorted(list(res[parameter])))
+            res[parameter].add(tuple(biome["parameters"][parameter]))
+        res[parameter] = list(res[parameter])
+    return res
+
+def purge_biomes(biomes):
+    parameters = get_parameters(biomes)
+    res = {}
+    for parameter in parameters:
+        res[parameter] = set()
+        for biome in biomes:
+            interval = biome["parameters"][parameter]
+            if isinstance(interval, float):
+                biome["parameters"][parameter] = [interval, interval]
+
+def interval_to_index(intervals: dict[str, list[tuple[float, float]]]):
+    res: dict[str, dict[tuple[float, float], int]] = {}
+    for parameter, intervals in intervals.items():
+        key_list = deepcopy(intervals)
+        key_list.sort(key=lambda interval: interval[0] + interval[1])
+        res[parameter] = {}
+        for ind, interval in enumerate(key_list):
+            res[parameter][interval] = ind
     return res
 
 def adjust_val(parameter, val):
@@ -118,38 +134,44 @@ def proba_parameter(parameter, interval):
     return to_val - from_val
 
 def graph(biomes):
-    nodes = set([biome["biome"] for biome in biomes if biome["parameters"]["depth"] == 0.0])
-    parameters = set(get_parameters(biomes)).difference(["depth", "offset"])
+    purge_biomes(biomes)
+    intervals = values_of_parameters(biomes)
+    interval_dict = interval_to_index(intervals)
+    nodes = set(biome["biome"] for biome in biomes)
+    parameters = set(get_parameters(biomes))
     G = nx.Graph()
     for node in nodes:
         G.add_node(node, description=node, weight=0)
-    for biome1 in tqdm(biomes):
-        if biome1["parameters"]["depth"] != 0.0:
-            continue
+    for ind, biome in enumerate(biomes):
+        for parameter in biome["parameters"].keys():
+            val = biome["parameters"][parameter]
+            if not isinstance(val, list):
+                biome["parameters"][parameter] = [val, val]
+                breakpoint()
+    for biome1 in tqdm(biomes, smoothing=0.0):
         biome1_parameters = {key: val for key, val in biome1["parameters"].items() if key in parameters}
         G.nodes[biome1["biome"]]["weight"] += np.prod(
             [
                 proba_parameter(parameter, interval)
-                for parameter, interval in biome1_parameters.items()
+                for parameter, interval in biome1_parameters.items() if interval[0] + EPSILON < interval[1]
             ]
         )
         for biome2 in biomes:
-            if biome2["parameters"]["depth"] != 0.0:
-                continue
             if biome1["biome"] == biome2["biome"]:
                 continue
             nr_adjacent = 0
             product = 1.0
             for parameter in parameters:
-                length = len(set(biome1["parameters"][parameter]).intersection(biome2["parameters"][parameter]))
-                from_overlap = max(biome1["parameters"][parameter][0], biome2["parameters"][parameter][0])
-                to_overlap = min(biome1["parameters"][parameter][1], biome2["parameters"][parameter][1])
-                if from_overlap == to_overlap:
-                    nr_adjacent += 1
-                    continue
-                if from_overlap > to_overlap:
+                neighbour_number = abs(interval_dict[parameter][tuple(biome1["parameters"][parameter])] - interval_dict[parameter][tuple(biome2["parameters"][parameter])])
+                if neighbour_number >= 2:
                     break
-                product *= proba_parameter(parameter, [from_overlap, to_overlap])
+                if neighbour_number == 1:
+                    nr_adjacent += 1
+                from_para = biome1["parameters"][parameter][0]
+                to_para = biome1["parameters"][parameter][1]
+                if neighbour_number == 0 and abs(to_para - from_para) >= EPSILON:
+                    temp = proba_parameter(parameter, [from_para, to_para])
+                    product *= temp
             else:
                 if nr_adjacent == 0:
                     print(biome1)
@@ -436,6 +458,14 @@ def process_graph(from_filename, temp_filename, to_filename, quantile):
     round_graph(temp_filename, to_filename)
     os.remove(temp_filename)
 
+def test_interval_to_index():
+    biomes = read_biomes("overworld.json")
+    purge_biomes(biomes)
+    intervals = values_of_parameters(biomes)
+    interval_dict = interval_to_index(intervals)
+    printable_interval_dict = {parameter: {str(interval): ind for interval, ind in parameter_dict.items()} for parameter, parameter_dict in interval_dict.items()}
+    print(json.dumps(printable_interval_dict, indent=4))
+    
 def main_analyse():
     save_probabilities()
     generate_graph("overworld.json", "overworld_graph.graphml")
@@ -446,11 +476,11 @@ def main_analyse():
 
 if __name__ == "__main__":
     main_analyse()
-   # round_graph()
-   # prune_graph(0.35)
-   # generate_graph("overworld.json", "overworld_graph.graphml")
-   # relative_graph()
-   # plot_main()
-   # plot_main()
-   # save_probabilities()
-   # print(json.dumps(values_of_parameters(read_biomes("overworld.json")), indent=4))
+#    round_graph()
+#    prune_graph(0.35)
+#    generate_graph("overworld.json", "overworld_graph.graphml")
+#    relative_graph()
+#    plot_main()
+#    plot_main()
+#    save_probabilities()
+#    test_interval_to_index()
